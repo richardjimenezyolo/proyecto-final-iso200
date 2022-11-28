@@ -18,7 +18,7 @@ int main() {
 
     int quater = 1;
 
-    while (quater <= 4) {
+    while (1) {
         teamA.printScoreTable(quater);
         teamB.printScoreTable(quater);
         printOptions();
@@ -39,9 +39,27 @@ int main() {
             break;
         
         case 'n':
-            quater++;
+            if (quater < 5) {
+                quater++;
+            }
             break;
         default:
+            break;
+        }
+
+        if(quater == 5) {
+            if (teamA.getPoints() == teamB.getPoints()) {
+                std::cout << "Hay un empate, ahora se jugara tiempo extra bla bla bla \n";
+                quater++;
+                continue;
+            }
+
+            if (teamA.getPoints() > teamB.getPoints()) {
+                std::cout << "Ganador: equipo " << teamA.team << ", con {" << teamA.getPoints() << "} pts \n";
+            } else {
+                std::cout << "Ganador: equipo " << teamB.team << ", con {" << teamB.getPoints() << "} pts \n";
+            }
+
             break;
         }
     }

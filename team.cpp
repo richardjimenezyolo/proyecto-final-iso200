@@ -57,6 +57,11 @@ class Team {
             players[player-1].addPoints(_points);
             points += _points;
         }
+
+
+        int getPoints() {
+            return points;
+        }
     
 
 };
