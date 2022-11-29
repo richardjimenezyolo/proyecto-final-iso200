@@ -19,6 +19,7 @@ struct Team createTeam(char tname) {
         struct Player cp;
         cp.id = i;
         cp.team = t.team;
+        cp.points = 0;
         t.players[i - 1] = cp;
     }
 
