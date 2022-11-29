@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include <stdlib.h>
 #include "team.c"
 
 void printOptions() {
@@ -14,6 +15,7 @@ int main() {
     int quater = 1;
 
     while (1) {
+        system("clear");
         printTeamScoreTable(teamA, quater);
         printTeamScoreTable(teamB, quater);
         printOptions();
